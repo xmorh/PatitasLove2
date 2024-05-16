@@ -1,0 +1,54 @@
+{% extends 'patitasLove/base.html' %}
+{% load static %}
+{% block contenido %}
+<div class="container mx-auto px-4">
+    <br>
+    <h1 class="text-4xl font-semibold text-center mb-6">Productos</h1>
+    <div class="productos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Producto 1 -->
+        <div class="producto bg-white p-4 rounded-lg shadow-md">
+            <div class="contenedor mb-4">
+                <img src="{% static 'img/alimento1.jpg'%}" alt="yoga" class="w-full h-auto rounded-md object-cover">
+            </div>
+
+            <div class="detalles">
+                <h5 class="text-sm text-gray-500">Marca</h5>
+                <h2 class="text-lg font-semibold">Producto 1</h2>
+                <h3 class="text-xl font-bold">$0</h3>
+                <button class="bg-pink-600 text-white w-full px-4 py-2 rounded-md mt-4 hover:bg-pink-700">Agregar al
+                    Carro</button>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto bg-white p-4 rounded-lg shadow-md">
+            <div class="contenedor mb-4">
+                <img src="{% static 'img/alimento2.jpg'%}" alt="iphone" class="w-full h-auto rounded-md object-cover">
+            </div>
+
+            <div class="detalles">
+                <h5 class="text-sm text-gray-500">Marca</h5>
+                <h2 class="text-lg font-semibold">Producto 2</h2>
+                <h3 class="text-xl font-bold">$0</h3>
+                <button class="bg-pink-600 text-white w-full px-4 py-2 rounded-md mt-4 hover:bg-pink-700">Agregar al
+                    Carro</button>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto bg-white p-4 rounded-lg shadow-md">
+            <div class="contenedor mb-4">
+                <img src="{% static 'img/alimento3.jpg'%}" alt="iphone" class="w-full h-auto rounded-md object-cover">
+            </div>
+
+            <div class="detalles">
+                <h5 class="text-sm text-gray-500">Marca</h5>
+                <h2 class="text-lg font-semibold">Producto 2</h2>
+                <h3 class="text-xl font-bold">$0</h3>
+                <button class="bg-pink-600 text-white w-full px-4 py-2 rounded-md mt-4 hover:bg-pink-700 ">Agregar
+                    al Carro</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
