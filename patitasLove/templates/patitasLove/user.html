@@ -1,0 +1,28 @@
+{% extends 'patitasLove/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<!-- Contenido principal -->
+<div class="container mx-auto px-4 mt-24 mb-24">
+    <h1 class="text-3xl font-bold my-16">Perfil de Usuario</h1>
+
+    <!-- Información del usuario -->
+    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Datos Personales</h2>
+        <p class="mb-2"><strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+        <p class="mb-2"><strong>Correo Electrónico:</strong> {{ user.email }}</p>
+        <p class="mb-2"><strong>Dirección:</strong> {{ user.profile.address }}</p>
+        <p class="mb-2"><strong>Ciudad:</strong> {{ user.profile.city }}</p>
+        <p class="mb-2"><strong>Teléfono:</strong> {{ user.profile.phone }}</p>
+    </div>
+
+    <!-- Botón de cerrar sesión -->
+    <div class="flex justify-end">
+        <form action="{% url 'home' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700">Cerrar Sesión</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

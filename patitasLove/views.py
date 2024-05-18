@@ -16,3 +16,6 @@ def sesion(request):
 
 def carrito(request):
     return render(request, 'patitasLove/carrito.html')
+
+def user(request):
+    return render(request, 'patitasLove/user.html')
